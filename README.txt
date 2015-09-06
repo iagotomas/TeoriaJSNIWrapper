@@ -28,18 +28,19 @@ Once the system is configured properly, using maven is as simple as executing a 
 project, where the "pom.xml" file is located.
 
 To create a jar package containing the GWT module run the following command from the base folder of the project:
-$> mvn -DskipTests package
+$> mvn package
 
 The success of this command should create a .jar file in the target folder (target/TeoriaJSNIWrapper-version.jar)
 
 To create the demo app run the following command from the base folder of the project:
-$> mvn -DskipTests -P demo gwt:compile
+$> mvn -P demo gwt:compile
 
 If the command succeeds it will output the generated files in the target folder 
 (target/TeoriaJSNIWrapper-version/gwt_teoria)
 
 It is possible to use the codeserver GWT provides to test the demo, run this command and follow codeserver instructions
-$> mvn -DskipTests -P demo gwt:run-codeserver 
+$> mvn -P demo gwt:run-codeserver 
+
 
 
 #USING 
