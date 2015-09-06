@@ -131,14 +131,14 @@
 						<includes>**/*JsoTest.java</includes>
 						<extra>${project.build.directory}/gwt-extra</extra>
 						<bindAddress>0.0.0.0</bindAddress>
-						<logLevel>ALL</logLevel>
+						<logLevel>WARN</logLevel>
 						<runTarget>blip.html</runTarget>
 						<debugPort>8888</debugPort>
 						<strict>true</strict>
 						<sourceLevel>auto</sourceLevel>
 						<htmlunit>Chrome</htmlunit>
-						<productionMode>true</productionMode>
-						h
+						<productionMode>false</productionMode>
+						<webMode>true</webMode>
 					</configuration>
 				</plugin>
 			</plugins>

@@ -1,6 +1,7 @@
 package com.sinewavemultimedia.teoria.interfaces;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArrayInteger;
 
 /**
  * An interval object (teoria.Interval), which makes it easy to find the interval between two notes,
@@ -15,10 +16,17 @@ public interface Interval {
 
 	/**
 	 * The interval representation of the interval
-	 * 
+	 * Note this method may raise an exception if the underlying coord is a string instead of an array.
 	 * @return the interval representation of the interval
 	 */
-	String coord();
+	JsArrayInteger coord();
+
+	/**
+	 * The interval representation of the interval
+	 * Note this method may raise an exception if the underlying coords are an array instead of a string.
+	 * @return the interval representation of the interval
+	 */
+	String coordAsString();
 
 	/**
 	 * The interval number (A ninth = 9, A seventh = 7, fifteenth = 15)

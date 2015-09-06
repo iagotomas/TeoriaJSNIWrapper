@@ -1,6 +1,7 @@
 package com.sinewavemultimedia.teoria;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArrayInteger;
 import com.sinewavemultimedia.teoria.interfaces.Interval;
 
 public class IntervalJso extends JavaScriptObject implements Interval {
@@ -24,7 +25,7 @@ public class IntervalJso extends JavaScriptObject implements Interval {
 	 * @param simpleInterval An interval represented in simple string form.
 	 * @return the inversion of the interval provided
 	 */
-	public static native IntervalJso invert(String simpleInterval)/*-{
+	public static native String invert(String simpleInterval)/*-{
 		return $wnd.teoria.Interval.invert(simpleInterval);
 	}-*/;
 	/**
@@ -51,8 +52,9 @@ public class IntervalJso extends JavaScriptObject implements Interval {
 	 * @param from The Note which is the start of the measuring
 	 * @param to The Note which is the end of the measuring
 	 * @return an interval object which represents the interval between two notes.
+	 * @deprecated Not working teoria.js doesn't seem to have it
 	 */
-	public static native NoteJso between(NoteJso from,String to) /*-{
+	private static native IntervalJso between(NoteJso from,String to) /*-{
 		return $wnd.teoria.Interval.between(from,to);
 	}-*/;
 	
@@ -102,7 +104,11 @@ public class IntervalJso extends JavaScriptObject implements Interval {
 		return $wnd.teoria.Interval(coord);
 	}-*/;
 	@Override
-	public final native String coord() /*-{
+	public final native JsArrayInteger coord() /*-{
+		return this.coord;
+	}-*/;
+	@Override
+	public final native String coordAsString() /*-{
 		return this.coord;
 	}-*/;
 	@Override
