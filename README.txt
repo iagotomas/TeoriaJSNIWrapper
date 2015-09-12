@@ -2,7 +2,8 @@
 This file contains some instructions on how to build a jar package for the current project and how to build the demo 
 app.
 
-#REQUIREMENTS
+REQUIREMENTS
+------------
 
 To create a jar package or to build the demo app you must have installed the following requirements in your system.
 
@@ -12,7 +13,8 @@ To create a jar package or to build the demo app you must have installed the fol
 	http://maven.apache.org/install.html
 
 	
-#CONFIGURING
+CONFIGURING
+-----------
 
 If you wish to get a jar or create the demo app with a different GWT SDK or JDK version you just need to edit the pom.xml file
 found at the base of the project. There you'll find along lines 8-10 the configuration properties for the GWT SDK and JDK
@@ -22,7 +24,8 @@ versions. Below you may find an explanation of each property:
 - java.min.version : Java minimum compatible version  
 
 
-#RUNNING
+RUNNING
+-------
 
 Once the system is configured properly, using maven is as simple as executing a command at the base directory of the 
 project, where the "pom.xml" file is located.
@@ -43,7 +46,8 @@ $> mvn -P demo gwt:run-codeserver
 
 
 
-#USING 
+USAGE
+-----
 
 To use the GWT module you must add the jar to your dependencies,either by including it in the WEB-INF/lib/ folder or 
 into your dependency manager and inherit the module in your module definition file ( .gwt.xml ) by including 
